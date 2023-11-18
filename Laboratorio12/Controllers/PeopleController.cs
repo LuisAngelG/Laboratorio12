@@ -1,4 +1,5 @@
-﻿using Laboratorio12.Models;
+﻿using Laboratorio12.Controllers.Request;
+using Laboratorio12.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -66,6 +67,27 @@ namespace Laboratorio12.Controllers
             var response = people.Where(x => x.Id == person.Id).FirstOrDefault();
 
             return response;
+        }
+
+        [HttpPost]
+        public Person GetByFilter1(PersonRequest1 person)
+        {
+
+            return null;
+        }
+
+        [HttpPost]
+        public Person GetByFilter2(PersonRequest2 person)
+        {
+
+            return null;
+        }
+
+        [HttpPost]
+        public Person GetByFilter3(PersonRequest3 person)
+        {
+
+            return null;
         }
 
         [HttpPost]
